@@ -36,6 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Project apps
+    "code_review.assignments",
+    # Third party apps
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -74,8 +79,12 @@ WSGI_APPLICATION = 'code_review.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('CRG_DB_NAME'),
+        'USER': os.getenv('CRG_DB_USER'),
+        'PASSWORD': os.getenv('CRG_DB_PASSWORD'),
+        'HOST': os.getenv('CRG_DB_HOST'),
+        'PORT': os.getenv('CRG_DB_PORT'),
     }
 }
 
