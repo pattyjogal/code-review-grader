@@ -1,0 +1,8 @@
+export CRG_DB_NAME=
+export CRG_DB_USER=
+export CRG_DB_PASSWORD=
+export CRG_DB_HOST=
+export CRG_DB_PORT=
+
+export SECRET_KEY=
+export DEBUG=
