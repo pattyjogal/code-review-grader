@@ -1,6 +1,6 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["FormatTest"]
+  resolves = ["PyLint"]
 }
 
 action "Build" {
@@ -8,9 +8,7 @@ action "Build" {
   args = "build -t patrick/code_review_grader ."
 }
 
-action "FormatTest" {
-  uses = "actions/bin/filter@b2bea07"
+action "PyLint" {
+  uses = "./lint-action"
   needs = ["Build"]
-  runs = "make"
-  args = "lint"
 }
