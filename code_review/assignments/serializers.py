@@ -1,6 +1,6 @@
 # pylint: disable=missing-docstring,too-few-public-methods
 from rest_framework import serializers
-from .models import Assignment, RubricField, AssignmentSubmission
+from .models import Assignment, AssignmentSubmission
 
 
 class AssignmentSerializer(serializers.ModelSerializer):

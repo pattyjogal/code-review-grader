@@ -42,5 +42,5 @@ class AssignmentSubmission(models.Model):
 
     graded_rubric_fields = models.ManyToManyField(RubricField)
     repository_url = models.URLField()
-    #student = models.ForeignKey() # TODO: Implement Student
+    #student = models.ForeignKey() # Will be added w/ Student model
     grading_complete = models.BooleanField(default=False)
