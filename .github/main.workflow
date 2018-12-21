@@ -9,7 +9,7 @@ action "Build" {
 }
 
 action "FormatTest" {
-  uses = "FormatTest"
+  uses = "actions/bin/filter@b2bea07"
   needs = ["Build"]
   runs = "make"
   args = "lint"
